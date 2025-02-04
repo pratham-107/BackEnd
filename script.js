@@ -27,7 +27,7 @@ function deleteUser(){
     let users = JSON.parse(localStorage.getItem("users")) || [];
     if (users.length > 0){
         let removeUser = users.pop();
-        localStorage.setItem("user", JSON.stringify(users));
+        localStorage.setItem("users", JSON.stringify(users));
         console.log("User Deleted:", removeUser);
     }
     else{

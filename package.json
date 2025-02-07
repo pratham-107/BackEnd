@@ -6,6 +6,8 @@
     "dog-image-fetcher": "^1.0.4",
     "eff-diceware-passphrase": "^3.0.0",
     "jokes": "^0.0.2",
+    "meme-maker": "^2.1.2",
+    "node-red-node-openweathermap": "^1.0.1",
     "random-jokes-gen": "^0.0.1",
     "random-password": "^0.1.2",
     "snake": "^0.0.1",

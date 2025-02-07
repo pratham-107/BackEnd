@@ -46,5 +46,7 @@
 //   console.log(joke);
 // });
 
-const jokes = require('jokes');
-console.log(jokes());
+// const jokes = require('jokes');
+// console.log(jokes());
+
+

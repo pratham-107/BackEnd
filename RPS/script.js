@@ -4,7 +4,7 @@ function rock(){
     if(val == r){
         alert("tie");
     }
-    else if(val == 2){
+    else if(val == 1){
         alert("computer won");
     }
     else{
@@ -19,7 +19,7 @@ function paper(){
     if(val == p){
         alert("tie");
     }
-    else if(val == 0){
+    else if(val == 2){
         alert("computer won");
     }
     else{
@@ -34,7 +34,7 @@ function scissor(){
     if(val == s){
         alert("tie");
     }
-    else if(val == 1){
+    else if(val == 0){
         alert("computer won");
     }
     else{

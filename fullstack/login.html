@@ -16,11 +16,17 @@
             background-color: powderblue;
         }
         form{
-            background-color: pink;
-            padding: 50px 70px;
-            text-align: center;
-            border: 2px solid white;
-            border-radius: 10px 18px;
+            font-family: Montserrat, sans-serif;
+            width: 300px;
+            height: 300px;
+            translate: -6px -6px;
+            background: #ff66a3;
+            border: 3px solid #000000;
+            box-shadow: 12px 12px 0 #000000;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            align-content: center;
+            padding: 20px;
         }
 
         input{
@@ -31,24 +37,27 @@
             &:hover{
                 transform: scale(1.1);
                 transition: 0.2s ease;
+                border: 3px solid black;
             }
         }
 
         button{
-            padding: 10px 15px;
-            border: 1px solid black;
-            border-radius: 10px;
-            font-weight: 600;
-            background-color: rgb(254, 138, 157);
+            padding: 5px 10px;
+            margin-top: 10px;
+            border: 3px solid #000000;
+            box-shadow: 3px 3px 0 #000000;
+            font-weight: 750;
+            background: #4ade80;
+            transition: all 0.3s ease;
             cursor: pointer;
 
-
             &:hover{
-                transform: scale(1.1);
-                transition: 0.2s ease;
-                background-color: powderblue;
+                translate: 1.5px 1.5px;
+                box-shadow: 1.5px 1.5px 0 #000000;
+                background: #1ac2ff;
             }
         }
+
 
         a{
             color: black;

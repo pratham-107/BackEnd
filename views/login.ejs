@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ccc;
+        }
+        form{
+            font-family: Montserrat, sans-serif;
+            width: 300px;
+            height: 300px;
+            translate: -6px -6px;
+            background: #ff66a3;
+            border: 3px solid #000000;
+            box-shadow: 12px 12px 0 #000000;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            align-content: center;
+            padding: 20px;
+        }
+
+        input{
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+
+            &:hover{
+                transform: scale(1.1);
+                transition: 0.2s ease;
+                border: 3px solid black;
+            }
+        }
+
+        button{
+            padding: 5px 10px;
+            margin-top: 10px;
+            border: 3px solid #000000;
+            box-shadow: 3px 3px 0 #000000;
+            font-weight: 750;
+            background: #4ade80;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover{
+                translate: 1.5px 1.5px;
+                box-shadow: 1.5px 1.5px 0 #000000;
+                background: #1ac2ff;
+            }
+        }
+
+
+        a{
+            color: black;
+            cursor: pointer;
+
+            &:hover{
+                color: blue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <form id="login-form">
+        <h2>Login Form</h2>
+        <input type="text" name="Email" placeholder="Enter your email" required>
+        <br><br>
+        <input type="text" name="Password" placeholder="Enter your password" required>
+        <br><br>
+        <button type="submit">Login</button>
+        <br>
+        <p id="message"></p>
+    </form>
+
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const message = document.getElementById('message');
+        const loginScriptURL = 'https://script.google.com/macros/s/AKfycbxwSWr0oh6mGUqXi8fjfxK9_6MqirNWdE9fy8_AUlQ079IDfYbOipn2l5PCPTxFNTp4cQ/exec';
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(loginForm);
+            const email = formData.get('Email');
+            const password = formData.get('Password');
+
+            fetch(`${loginScriptURL}?Email=${email}&Password=${password}`)
+
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === "success") {
+                        message.innerHTML = "Login Successful! Redirecting...";
+                        setTimeout(() => window.location.href = "index.html", 1000);
+                    } else {
+                        message.innerHTML = "Invalid email or password.";
+                    }
+                })
+                .catch(error => {
+                    message.innerHTML = "Error: " + error.message;
+                });
+        });
+    </script>
+</body>
+</html>

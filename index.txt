@@ -1,0 +1,26 @@
+1. node js syntax----->
+
+const node = require('package name');
+const server = http.createServer((req, res) =>{
+    if(req.url == "/"){
+       res.end("Welcome to home page");
+    }
+})
+
+
+2. Express js syntax----->
+
+const Express = require('Express');
+const app = Express();
+app.get('/', (req, res) =>{
+    res.send("this is home page");
+})
+
+
+
+3. MIDDLEWARE----->
+To check the authentication between request and respone.
+            *types of MIDDLEWARE*
+            1.user define: function(req, res, nex){}
+            2.Third party: npm
+            3.Security level:

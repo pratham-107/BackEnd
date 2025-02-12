@@ -58,3 +58,25 @@
 //     return series;
 // }
 // console.log(fibo(5));
+
+
+// console.log("hello world");
+
+
+const express = require('express');
+const app = express();
+app.set('view engine', 'ejs')
+
+app.get('/', (req, res)=>{
+    res.send("this is home page");
+})
+
+app.get('/signup', (req,res)=>{
+    res.render('signup');
+})
+
+app.get('/login',(req, res)=>{
+    res.render('login');
+})
+
+app.listen(3000);

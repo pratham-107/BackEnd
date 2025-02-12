@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ccc;
+        }
+
+        form{
+            font-family: Montserrat, sans-serif;
+            width: 300px;
+            height: 350px;
+            translate: -6px -6px;
+            background: #ff66a3;
+            border: 3px solid #000000;
+            box-shadow: 12px 12px 0 #000000;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            align-content: center;
+            padding: 20px;
+        }
+
+        input{
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            border: none;
+
+            &:hover{
+                transform: scale(1.1);
+                transition: 0.2s ease-in-out;
+                border: 3px solid black;
+            }
+        }
+
+        button{
+            padding: 5px 10px;
+            margin-top: 10px;
+            border: 3px solid #000000;
+            box-shadow: 3px 3px 0 #000000;
+            font-weight: 750;
+            background: #4ade80;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+        }
+
+        button:hover{
+            background-color: blue;
+            transform: scale(1.1);
+            transition: 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <form id="signup-form">
+        <h2>Signup Form</h2>
+        <input type="text" name="Email" placeholder="Enter your email" required>
+        <br><br>
+        <input type="text" name="Firstname" placeholder="Enter your Firstname" required>
+        <br><br>
+        <input type="text" name="Lastname" placeholder="Enter your Lastname" required>
+        <br><br>
+        <!-- <input type="text" name="username" placeholder="Enter your username" required> -->
+        <!-- <br><br> -->
+        <input type="text" name="Password" placeholder="Enter password" required> 
+        <br>
+        <button type="submit">send</button>
+        <br>
+        <p id="message"></p>
+    </form>
+    
+
+    <script>
+        const signupForm = document.getElementById('signup-form');
+        const message = document.getElementById('message');
+        const signupScriptURL = 'https://script.google.com/macros/s/AKfycbxwSWr0oh6mGUqXi8fjfxK9_6MqirNWdE9fy8_AUlQ079IDfYbOipn2l5PCPTxFNTp4cQ/exec';
+
+        signupForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(signupForm);
+
+            fetch(signupScriptURL, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === "success") {
+                    message.innerHTML = "Signup Successful! Redirecting to login...";
+                    setTimeout(() => window.location.href = "login.ejs", 1000);
+                } else {
+                    message.innerHTML = data.message || "Signup failed. Try again.";
+                }
+            })
+            .catch(error => {
+                message.innerHTML = "Error: " + error.message;
+            });
+        });
+    </script>
+</body>
+</html>

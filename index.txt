@@ -22,5 +22,11 @@ app.get('/', (req, res) =>{
 To check the authentication between request and respone.
             *types of MIDDLEWARE*
             1.user define: function(req, res, nex){}
-            2.Third party: npm
-            3.Security level:
+            2.Third party: npm, morgon, morcos
+            3.Security level: to provde high end Security.
+
+
+            syntax-: app.use((req,res,next)=>{
+                      console.log(""Security verified);
+                      retrun next();
+                    })

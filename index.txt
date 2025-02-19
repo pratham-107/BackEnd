@@ -1,3 +1,33 @@
+function fibo(n){
+    let series =[0,1];
+    for(let i =2; i<n; i++){
+        series.push(series[i-1] + series[i-2]);
+    }
+    return series;
+}
+console.log(fibo(5));
+
+
+console.log("hello world");
+
+
+
+
+
+var joker = require("random-joke-getter");
+ 
+Get a random dad joke
+joker.getDadJoke(function(joke) {
+  console.log(joke);
+});
+
+const jokes = require('jokes');
+console.log(jokes());
+
+
+
+
+
 1. node js syntax----->
 
 const node = require('package name');
@@ -30,3 +60,8 @@ To check the authentication between request and respone.
                       console.log(""Security verified);
                       retrun next();
                     })
+
+
+package.json = developer
+package.lock.json = client
+morgon is used to check which methods are used.

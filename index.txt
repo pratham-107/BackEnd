@@ -65,3 +65,6 @@ To check the authentication between request and respone.
 package.json = developer
 package.lock.json = client
 morgon is used to check which methods are used.
+shecma = entery point (to start your database);
+.body is used for post method.
+.query is used for get method.

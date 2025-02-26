@@ -1,0 +1,30 @@
+//SCHEMA//
+server (req, res)--> routes --> frontend(GUI) --> data --> server --> DATABASE --> server
+
+//basic use of schema//
+-starting point to start a database.
+
+[
+    {
+        "username" : "value",
+        "password" : "value"
+    }
+    {
+        "username" : "value",
+        "password" : "value"
+    }
+    {
+        "username" : "value",
+        "password" : "value"
+    }
+]
+
+-------------------------------------------------------------------------------------------
+1. hashcode -> hexa code
+    example - password 1234(1-wefhuh, 2-tyunjd, 3-eyrkdk, 4bchdjc)
+-------------------------------------------------------------------------------------------
+2. Morphed--
+   a####sh@gmail.com
+-------------------------------------------------------------------------------------------
+3. package - npm i moongose.   
+

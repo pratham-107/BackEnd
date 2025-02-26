@@ -1,0 +1,8 @@
+--we create model folder to store initial schema of a database.
+
+user.js --> schema
+userschema = func(){
+    username : String,
+    email    : String,
+    password : number
+}

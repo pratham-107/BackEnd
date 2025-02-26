@@ -1,0 +1,4 @@
+//to connect local host to models
+//port number and url as well
+
+//db.js files is used to connect and create models with server.

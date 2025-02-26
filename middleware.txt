@@ -68,3 +68,6 @@ morgon is used to check which methods are used.
 shecma = entery point (to start your database);
 .body is used for post method.
 .query is used for get method.
+
+
+                              

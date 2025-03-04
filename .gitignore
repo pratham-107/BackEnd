@@ -1,19 +1,21 @@
-//we will ignore the node_module folde..
-node-node_module
+# //we will ignore the node_module folde..
+# node-node_module
 
 
-----diff b/w git and github---->
-git is a version control that works as a tunnel between vs code and github .
-github is a website that store the code and used for collaboration.
+# ----diff b/w git and github---->
+# git is a version control that works as a tunnel between vs code and github .
+# github is a website that store the code and used for collaboration.
 
 
-                                   main branch
-                                        |
-                                        |
-                            --------------------------
-                            |           |            |
-                            |           |            |
-                            D1          D2           D3
+#                                    main branch
+#                                         |
+#                                         |
+#                             --------------------------
+#                             |           |            |
+#                             |           |            |
+#                             D1          D2           D3
 
+.env
+node_module
 
                            

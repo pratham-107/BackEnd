@@ -27,4 +27,5 @@ server (req, res)--> routes --> frontend(GUI) --> data --> server --> DATABASE -
    a####sh@gmail.com
 -------------------------------------------------------------------------------------------
 3. package - npm i moongose.   
-
+ ---------------------------------------------------------------------------------
+4. JWT_TOKEN --> fast forward login.

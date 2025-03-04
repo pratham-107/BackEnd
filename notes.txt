@@ -37,3 +37,13 @@
 
 // const generate = require('eff-diceware-passphrase');
 // console.log(generate(1));
+
+------------------------------------------------------------------ 
+
+        //steps to create Server //
+app.js
+npm i jsonfile
+npm i Express
+views folder ---> ejs file
+config folder ---> db.js
+models folder ---> user.js

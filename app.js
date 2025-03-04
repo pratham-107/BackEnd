@@ -41,4 +41,23 @@ app.post('/form-submitted', (req, res)=>{
     res.send("Form Submitted");
 })
 
+
+                 //connecting database//
+
+app.get('/register', (req, res)=>{
+    res.render('register');
+})
+
+app.post('/register', (req, res)=>{
+    const  {Username, Password, Email} = req.body;  //copy image to compare with schema//
+     userModel.create({
+        Username : Username,
+        Password : Password,
+        Email    : Email
+    })
+
+    res.send("user registered");
+})
+
+
 app.listen(3000);

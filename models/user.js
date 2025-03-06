@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
     Username : String,
-    Passwod : String,
+    Password : String,
     Email : String
 
 
@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
     // }
 });
 
-const userModel = mongoose.model('user', userSchema); //copy
+const userModel = mongoose.model('User', userSchema); //copy
 
 module.exports = userModel;        //server
 

@@ -70,4 +70,4 @@ shecma = entery point (to start your database);
 .query is used for get method.
 
 
-                              
+morgon is used to show the details of the server.          

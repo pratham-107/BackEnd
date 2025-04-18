@@ -47,3 +47,20 @@ npm i Express
 views folder ---> ejs file
 config folder ---> db.js
 models folder ---> user.js
+
+
+
+--------//LOAD BALANCER//----->
+load balancer is used to control the traffic on the website.
+
+
+alert(Math.floor(100000 + Math.random() * 100000)) 
+(100000 + ) is used to fixed the limit of the otp.
+
+
+----unary operator--->
+
+console.log(+true);    //1
+console.log(-true);    //-1
+console.log(+false);   //0
+console.log(-false);   //-0

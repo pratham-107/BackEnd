@@ -47,7 +47,6 @@ app.get('/', (req, res) =>{
 })
 
 
-
 3. MIDDLEWARE----->
 To check the authentication between request and respone.
             *types of MIDDLEWARE*
